@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "123456e-bb1b-1b11-bdcb-1111b1c11111",
+		"name": "Company B-Demo integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adoSearch",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "realm",
+							"value": "TSTDRV111111",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "011111111de111111a1cf11fbf1111cfc1111a11d11e1111d1ab1a11bcd11a1",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "022222222de222222a2cf22fbf2222cfc2222a22d22e2222d2ab2a22bcd22a2",
+							"type": "string"
+						},
+						{
+							"key": "consumerSecret",
+							"value": "033333333de333333a3cf33fbf3333cfc3333a33d33e3333d3ab3a33bcd33a3",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value":"044444444de444444a4cf44fbf4444cfc4444a44d44e4444d4ab4a44bcd44a4",
+							"type": "string"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"searchId\":\"customsearch1\",\r\n\t\t\"pageNo\":0,\r\n\t\t\"pageSize\":1000,\r\n\t\t\"filters\":[[\"isinactive\",\"is\",\"F\"]],\r\n\t\t\"include\":\"type|fieldid\",\r\n\t\t\"returnDateTime\":\"iso\"\r\n}"
+				},
+				"url": {
+					"raw": "https://rest.netsuite.com/app/site/hosting/restlet.nl?script=375&deploy=1",
+					"protocol": "https",
+					"host": [
+						"rest",
+						"netsuite",
+						"com"
+					],
+					"path": [
+						"app",
+						"site",
+						"hosting",
+						"restlet.nl"
+					],
+					"query": [
+						{
+							"key": "script",
+							"value": "375"
+						},
+						{
+							"key": "deploy",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
